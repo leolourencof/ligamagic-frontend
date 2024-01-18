@@ -1,0 +1,62 @@
+/* gaps sizes */
+
+.gap-0-5 {
+  gap: 2px;
+}
+
+.gap-1 {
+  gap: 4px;
+}
+
+.gap-2 {
+  gap: 8px;
+}
+
+.gap-4 {
+  gap: 16px;
+}
+
+.gap-5 {
+  gap: 20px;
+}
+
+.gap-6 {
+  gap: 24px;
+}
+
+.gap-8 {
+  gap: 32px;
+}
+
+/* displays */
+.flex {
+  display: flex;
+}
+
+/* directions */
+
+.flex-column {
+  flex-direction: column;
+}
+
+/* justifications */
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+/* items */
+
+.items-center {
+  align-items: center;
+}
+
+/* wraps */
+
+.flex-wrap {
+  flex-wrap: wrap;
+}

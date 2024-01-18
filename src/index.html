@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en" translate="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="global.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,600;0,700;1,400;1,500;1,600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="../public/favicon.svg" type="image/x-icon">
+    <title>LigaMagic</title>
+  </head>
+
+  <body>
+    <div id="container">
+      <aside class="flex flex-column justify-between items-center gap-8">
+        <div class="h-full w-full">
+          <figure class="flex justify-center items-center h-full">
+            <img
+              id="view-card"
+              src="assets/images/ThirdImage.svg"
+              alt=""
+              class="w-full h-full max-w-85"
+            />
+          </figure>
+        </div>
+
+        <hr class="h-0-25 bg-gray-300 w-full max-w-80-5" />
+
+        <div class="flex items-center w-full">
+          <button id="swipe-left">
+            <img src="assets/icons/LeftArrowIcon.svg" alt="" />
+          </button>
+
+          <div class="overflow-hidden w-full">
+            <ul id="cards-container" class="flex gap-4 w-full"></ul>
+          </div>
+
+          <button id="swipe-right">
+            <img src="assets/icons/RightArrowIcon.svg" alt="" />
+          </button>
+        </div>
+      </aside>
+
+      <main class="flex flex-column gap-8 w-full">
+        <div class="flex flex-column gap-6">
+          <div class="text-sm text-gray-400">
+            <span class="after-pipe">Home</span><span class="after-pipe">Magic: The Gathering</span
+            ><span class="after-pipe">Busca</span><span>Bazar - Lista de Desejos</span>
+          </div>
+
+          <div class="flex items-center justify-between text-sm text-black shadow-light-day p-3">
+            <div class="flex items-center gap-1">
+              <img src="assets//icons/CommonIcon.svg" alt="" />
+
+              <span class="font-semibold">#045</span>
+              <span>Dominaria Remastered</span>
+            </div>
+
+            <div class="flex items-center">
+              <span class="font-semibold before-pipe">DMR</span>
+
+              <button>
+                <img src="assets/icons/DownArrow.svg" alt="" />
+              </button>
+            </div>
+          </div>
+
+          <div class="flex justify-between">
+            <div>
+              <h2 class="font-semibold text-2xl text-black">Contramágica</h2>
+              <span class="italic text-base text-gray-500">Counterspell</span>
+            </div>
+
+            <div class="flex gap-4">
+              <button class="w-8 h-8" id="add-favorite">
+                <img src="assets/icons/FavoriteIcon.svg" alt="" />
+              </button>
+
+              <button class="w-8 h-8 border-0-25 border-gray-300 bg-gray-200">
+                <img src="assets/icons/OptionsIcon.svg" alt="" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-column gap-4 px-5 pt-3-5 pb-4-5 shadow-light-day bg-gray-200">
+          <div>
+            <div class="flex items-center gap-2">
+              <h3 class="text-2xl text-gray-600 font-semibold">Lista de Compras</h3>
+
+              <img src="assets/icons/HelpIcon.svg" alt="" />
+            </div>
+
+            <p class="text-base text-gray-500">
+              Add a carta aqui e deixe que a Liga calcule o melhor preço para você!
+            </p>
+          </div>
+
+          <div class="flex items-center gap-6 flex-wrap">
+            <div class="flex items-center gap-2">
+              <div
+                class="bg-gray-100 flex items-center justify-between w-24 h-10 border-0-25 border-gray-300 py-1 px-2"
+              >
+                <button id="increase">
+                  <img src="assets/icons/MoreIcon.svg" alt="" />
+                </button>
+
+                <div id="counter">
+                  <span class="font-semibold">1</span>
+                </div>
+
+                <button id="decrement">
+                  <img src="assets/icons/MinusIcon.svg" alt="" />
+                </button>
+              </div>
+
+              <button class="bg-gray-200 border-0-25 border-gray-300 h-10 w-10">
+                <img src="assets/icons/FilterIcon.svg" alt="" />
+              </button>
+            </div>
+
+            <button class="bg-green-200 py-2 px-3">
+              <img src="assets/icons/AddIcon.svg" alt="" class="pr-2" />
+
+              <span class="text-base text-green-100 font-medium">ADICIONAR NA LISTA</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="flex flex-column gap-6">
+          <div>
+            <div class="flex justify-between items-center h-8">
+              <h3 class="font-semibold text-black text-base">Detalhes da Carta</h3>
+
+              <a href="#" class="text-orange-200 font-bold text-sm px-2 py-1">Ver Tudo</a>
+            </div>
+
+            <ul class="flex flex-column gap-2">
+              <li class="flex items-center justify-between px-3 bg-gray-200 min-h-9">
+                <span class="text-base text-gray-500">Cor</span>
+
+                <span class="font-semibold text-blue-100">Azul</span>
+              </li>
+
+              <li class="flex items-center justify-between px-3 bg-gray-200 min-h-9">
+                <span class="text-base text-gray-500">Custo de Mana</span>
+
+                <div class="flex items-center gap-0-5">
+                  <img src="assets/icons/ManaIcon.svg" alt="" />
+
+                  <img src="assets/icons/ManaIcon.svg" alt="" />
+                </div>
+              </li>
+
+              <li class="flex items-center justify-between px-3 bg-gray-200 min-h-9">
+                <span class="text-base text-gray-500">Tipo</span>
+
+                <span class="font-semibold text-gray-600">Mágica Instantânea</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center h-8">
+              <div class="flex items-center gap-1">
+                <h3 class="font-semibold text-black text-base text-ellipsis">
+                  Preço Médio no Marketplace
+                </h3>
+
+                <img src="assets/icons/HelpIcon.svg" alt="" class="h-4 w-4" />
+              </div>
+
+              <a href="#" class="text-orange-200 font-bold text-sm px-2 py-1">Ver Tudo</a>
+            </div>
+
+            <ul>
+              <li
+                class="flex items-center justify-between px-3 bg-gray-200 min-h-9 gap-2 flex-wrap p-1-5"
+              >
+                <div class="flex items-center gap-1">
+                  <figure class="flex items-center">
+                    <img src="assets/icons/NormalIcon.png" alt="" />
+                  </figure>
+
+                  <span>Normal</span>
+                </div>
+
+                <div class="flex gap-5">
+                  <div class="flex gap-2">
+                    <div class="h-5 w-1 bg-lime"></div>
+                    <span class="font-semibold text-gray-500 text-nowrap">R$ 6,28</span>
+                  </div>
+
+                  <div class="flex gap-2">
+                    <div class="h-5 w-1 bg-yellow"></div>
+                    <span class="font-semibold text-gray-500 text-nowrap">R$ 9,39</span>
+                  </div>
+
+                  <div class="flex gap-2">
+                    <div class="h-5 w-1 bg-orange"></div>
+                    <span class="font-semibold text-gray-500 text-nowrap">R$ 14,00</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+
+  <script type="module" src="scripts/renderCards.js"></script>
+  <script type="module" src="scripts/carousel.js"></script>
+  <script type="module" src="scripts/counter.js"></script>
+  <script type="module" src="scripts/selectCard.js"></script>
+</html>
